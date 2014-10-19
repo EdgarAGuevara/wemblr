@@ -1,0 +1,22 @@
+PASOS:
+	1- Instalar Composer V
+	2- Instalar Laravel V
+	3- Crear proyecto LARAVEL V
+		-En linea de comandos se corre: 
+		  "composer create-project laravel/laravel nombre app" en la ruta donde queira crear la carpeta del proyecto
+	4- Instalar Ardent en nuestra app V
+		-Esto se hace para que las valdiaciones esten en "MODEL" y no "CONTROlLERS"(fat model- skin controller)
+		- En linea de comandos se corre:
+		  "composer require nombrepaquete version"
+	5- Configurar nuestra BD V
+		-la que sea: sqlite,posgre,etc
+		-crear nuestra migracion
+		  - el linea de comando se corre:
+		  	"php artisan migrate:make nombre descriptivo de migracion"
+		  - las migraciones tendran dos funciones:
+		  	"UP: que es lo que se va ejecutar en la bd"
+		  	"DOWN: es lo ipuesto a que se hizo en up"
+		 	 ESTO se hace para cuando se corra la migracion se ejecuta el metodo UP y cuando se haga un rollback se ejecutara el metodo down
+		  -Se ejecuta la migracion necesaria para poder trabajar la autentificacion sin problema desde 	 el framework, en linea de comando se corre:
+			"php artisan auth:redminders-table"	   	 
+		  -para que las migraciones sirva se necesita que php tenga instaladas las dependencias de la bd que se esta utilizando
