@@ -34,5 +34,10 @@ Route::get('/usuarios/editar/{id}',array('as'=>'usuarios.editar','uses'=>'Usuari
 
 Route::post('/usuarios/{id}/update',array('as'=>'usuarios.update','uses'=>'UsuarioController@update'));
 /*segmento tarea 2*/
-
 Route::get('/usuarios/borrar/{id}',array('as'=>'usuarios.borrar','uses'=>'UsuarioController@borrar'));
+
+/*segmento tare 3*/
+Route::get('/usuarios/login',array('as'=>'usuarios.login','uses'=>'UsuarioController@login'));
+
+Route::post('/usuarios/auth',array('as'=>'usuarios.auth','uses'=>'UsuarioController@auth'));
+/*segmento tare 3*/

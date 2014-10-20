@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>	
-	<meta charset="UTF-8">
+	<meta charset="iso-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@yield('title')</title>
 	<!-- Latest compiled and minified CSS -->
@@ -34,14 +34,14 @@
 								<ul class="dropdown-menu">
 									@if(Auth::guest())
 									<li><a href="{{--route('users.create')--}}">Registro</a></li>
-									<li><a href="{{--route('users.login')--}}">Inicio de SesiÃ³n</a></li>
+									<li><a href="{{--route('users.login')--}}">Inicio de Sesión</a></li>
 									@else
 									<li><a href="{{--route('users.show', ['id' => Auth::user()->id])--}}">Mi Cuenta</a></li>
 									<li><a href="{{--route('users.edit', ['id' => Auth::user()->id])--}}">Editar perfil</a></li>
-									<li><a href="{{--route('users.logout')--}}">Cerrar SesiÃ³n</a></li>
+									<li><a href="{{--route('users.logout')--}}">Cerrar Sesión</a></li>
 									@endif
 									<li class="divider"></li>
-									<li class="nav-header">Encabezado de navegaciÃ³n</li>
+									<li class="nav-header">Encabezado de navegación</li>
 									<li><a href="#">Link separado</a></li>
 									<li><a href="#">Otro link separado</a></li>
 								</ul>
@@ -63,7 +63,7 @@
 	</div>
 	<footer class="container">
 		<p class="pull-right"><a href="#">Back to top</a></p>
-		<p>&copy; 2014 Wembler, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">TÃ©rminos y condiciones</a></p>
+		<p>&copy; 2014 Wembler, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos y condiciones</a></p>
 	</footer>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<!-- Latest compiled and minified JavaScript -->

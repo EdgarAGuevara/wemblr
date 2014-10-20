@@ -31,10 +31,11 @@ class Usuario extends Ardent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */	
 	public static $rules= array(
+		/*"=>'required" estas ccaracterisitecas hacen que el ardent valide desde aqui en el model y no en el controler */
 		'name' =>'required' , 
 		'username' =>'required|unique:usuarios,username' ,
 		'email' =>'required|unique:usuarios,email' ,
-		// 'bio' =>'max:160' ,
+		'bio' =>'max:160' ,
 		'password' =>'required|min:8|confirmed' ,
 		'password_confirmation' =>'same:password' 
 	);

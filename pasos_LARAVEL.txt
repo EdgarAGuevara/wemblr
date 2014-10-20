@@ -1,11 +1,16 @@
 PASOS:
 	1- Instalar Composer V
 	2- Instalar Laravel V
+		-Correr esto en linea de comandos: 
+		"composer global require "laravel/installer=~1.1"
 	3- Crear proyecto LARAVEL V
 		-En linea de comandos se corre: 
 		  "composer create-project laravel/laravel nombre app" en la ruta donde queira crear la carpeta del proyecto
+	3.2- Copiar proyecto LARAVEL  desde GIT o llevar un proyecto a LARAVEL V
+		-En linea de comandos se corre: 
+		  "composer install" en la ruta de la carpeta del proyecto
 	4- Instalar Ardent en nuestra app V
-		-Esto se hace para que las valdiaciones esten en "MODEL" y no "CONTROlLERS"(fat model- skin controller)
+		-Esto se hace para que las valdiaciones esten en "MODEL" y no "CONTROLLERS"(fat model- skin controller)
 		- En linea de comandos se corre:
 		  "composer require nombrepaquete version"
 	5- Configurar nuestra BD V

@@ -10,6 +10,12 @@ class UsuarioController extends BaseController {
 	}
 	
 	/*Segmento tarea 1*/
+	public function main()
+	{
+		/*Se crea una vista con la funcion make que recibe un string con la ruta del archivo a impirmir y un array con los datos que se le quieran pasar a la vista*/
+		return View::make('usuarios.main',array('user'=> new Usuario()) );
+	}
+
 	public function nuevo()
 	{
 		/*Se crea una vista con la funcion make que recibe un string con la ruta del archivo a impirmir y un array con los datos que se le quieran pasar a la vista*/
@@ -24,7 +30,7 @@ class UsuarioController extends BaseController {
 		$usuario->email = Input::get('email');
 		$usuario->password = Input::get('password');
 		$usuario->password_confirmation = Input::get('password_confirmation');
-		// $usuario->bio = Input::get('bio');
+		$usuario->bio = Input::get('bio');
 		if($usuario->save()){
 			return Redirect::route('usuarios.show', array($usuario->id));
 		}else{
@@ -63,7 +69,7 @@ class UsuarioController extends BaseController {
 			$user->email = Input::get('email');
 			$user->password = Input::get('password');
 			$user->password_confirmation = Input::get('password_confirmation');
-			// $user->bio = Input::get('bio');
+			$user->bio = Input::get('bio');
 		if($user->updateUniques()){
 			return Redirect::route('usuarios.show', array($user->id));
 		}else{
@@ -74,4 +80,26 @@ class UsuarioController extends BaseController {
 		}
 	}
 	/*Segmento tarea 2*/
+
+	/*Segmento tarea 3*/
+	public function login()
+	{
+		$error = Session::get('error');
+		return View::make('usuarios.login')->with('error', $error);
+	}
+
+	public function auth()
+	{
+		$auth_data = ['email' => Input::get('email'), 'password' => Input::get('password')];
+
+		if(Auth::attempt($auth_data))
+		{
+			return Redirect::intended( route('usuarios.main') );
+		}
+		else
+		{															/*nombre del archivo.mensaje*/
+			return Redirect::route('usuarios.login')->with('error', Lang::get('reminders.wrong_credentials'))->withInput();
+		}
+	}
+	/*Segmento tarea 3*/	
 }
