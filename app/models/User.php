@@ -1,5 +1,7 @@
 <?php
 
+/*ESTE MODELO LO TRAE LARAVEL SOLO NO LO USO POR TEMA DE AUTODIDACTA*/
+
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;

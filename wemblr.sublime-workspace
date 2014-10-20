@@ -44,23 +44,28 @@
 	"buffers":
 	[
 		{
-			"file": "app/config/database.php",
+			"file": "pasos_LARAVEL.txt",
 			"settings":
 			{
-				"buffer_size": 3319,
+				"buffer_size": 1224,
+				"line_ending": "Unix",
+				"name": "pasos_LARAVEL"
+			}
+		},
+		{
+			"file": "app/database/migrations/2014_10_19_013942_create_usuario_table.php",
+			"settings":
+			{
+				"buffer_size": 1078,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "PASOS:\n	1- Instalar Composer\n	2- Instalar Laravel\n	3- Crear proyecto LARAVEL\n		-En linea de comandos se corre: \n		  \"composer create-project laravel/laravel nombre app\" en la ruta donde queira crear la carpeta del proyecto\n	4- Instalar Ardent en nuestra app\n	5- Configurar nuestra BD\n		-la que sea: sqlite,posgre,etc\n	\n",
-			"file": "pasos_LARAVEL.txt",
-			"file_size": 13,
-			"file_write_time": 130581454032206985,
+			"file": "app/config/database.php",
 			"settings":
 			{
-				"buffer_size": 319,
-				"line_ending": "Unix",
-				"name": "pasos_LARAVEL"
+				"buffer_size": 3323,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -109,11 +114,17 @@
 	"expanded_folders":
 	[
 		"/home/alexander/Documentos/Escuel_WEB/wemblr",
-		"/home/alexander/Documentos/Escuel_WEB/wemblr/app",
-		"/home/alexander/Documentos/Escuel_WEB/wemblr/app/config"
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/app/commands",
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/app/config",
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/app/database"
 	],
 	"file_history":
 	[
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/README.md",
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/hola.txt",
+		"/var/www/index.html",
+		"/home/alexander/Documentos/Escuel_WEB/wemblr/app/config/database.php",
+		"/etc/postgresql/9.1/main/pg_hba.conf",
 		"/home/alexander/Documentos/Escuel_WEB/wemblr/server.php",
 		"/home/alexander/Documentos/Escuel_WEB/clase2/app/routes.php",
 		"/home/alexander/Documentos/Escuel_WEB/clase2/app/models/Post.php",
@@ -218,48 +229,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/config/database.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3319,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 810.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "pasos_LARAVEL.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 319,
+						"buffer_size": 1224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								319,
-								319
+								1223,
+								1223
 							]
 						],
 						"settings":
@@ -271,7 +253,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/database/migrations/2014_10_19_013942_create_usuario_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								225,
+								225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 13.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1953,
+								1953
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
