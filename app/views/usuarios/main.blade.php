@@ -9,5 +9,5 @@
 @stop
 
 @section('content')
-	
+	<a href="{{route('usuarios.logout')}}">Cerrar Sesión</a><br>
 @stop

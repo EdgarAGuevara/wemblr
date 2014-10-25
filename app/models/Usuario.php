@@ -1,6 +1,5 @@
 <?php
 
-/*ESTE MODELO LO TRAE LARAVEL SOLO NO LO USO POR TEMA DE AUTODIDACTA*/
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
@@ -57,5 +56,11 @@ class Usuario extends Ardent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
+	
+	/*funcion que es la relacion de usuarios y post*/
+	public function posts()
+	{
+		return $this->hasMany('Post');
+	}
 
 }

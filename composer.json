@@ -5,8 +5,10 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"laravelbook/ardent": "2.*",
-		"barryvdh/laravel-debugbar": "dev-master"
+		"LaravelBook/ardent": "2.*",
+		"LaravelBook/ardent": "2.*",
+		"way/generators": "~2.0",
+		"barryvdh/laravel-debugbar": "~1.7"
 	},
 	"autoload": {
 		"classmap": [

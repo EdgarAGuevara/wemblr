@@ -13,7 +13,16 @@ class UsuarioController extends BaseController {
 	public function main()
 	{
 		/*Se crea una vista con la funcion make que recibe un string con la ruta del archivo a impirmir y un array con los datos que se le quieran pasar a la vista*/
-		return View::make('usuarios.main',array('user'=> new Usuario()) );
+		// return View::make('usuarios.main',array('user'=> new Usuario()) );
+
+		if(Auth::check())
+		{
+			return Redirect::intended( route('usuarios.main') );
+		}
+		else
+		{
+			return Redirect::route('usuarios.login')->with('error', Lang::get('reminders.wrong_registro'))->withInput();
+		}
 	}
 
 	public function nuevo()
@@ -91,6 +100,8 @@ class UsuarioController extends BaseController {
 	public function auth()
 	{
 		$auth_data = ['email' => Input::get('email'), 'password' => Input::get('password')];
+		
+		// Auth::attempt recive un campo que sea unico y un campo de password
 
 		if(Auth::attempt($auth_data))
 		{
@@ -100,6 +111,12 @@ class UsuarioController extends BaseController {
 		{															/*nombre del archivo.mensaje*/
 			return Redirect::route('usuarios.login')->with('error', Lang::get('reminders.wrong_credentials'))->withInput();
 		}
+	}
+	
+	public function logout()
+	{
+		Auth::logout();
+		return Redirect::route('usuarios.login')->with('error', 'Has cerrado sesión exitosamente');
 	}
 	/*Segmento tarea 3*/	
 }

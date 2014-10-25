@@ -43,7 +43,8 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			/*Aqui podemos cambiar la ruta del login si no es la default*/
+			return Redirect::guest('usuarios/login');
 		}
 	}
 });

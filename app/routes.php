@@ -40,4 +40,19 @@ Route::get('/usuarios/borrar/{id}',array('as'=>'usuarios.borrar','uses'=>'Usuari
 Route::get('/usuarios/login',array('as'=>'usuarios.login','uses'=>'UsuarioController@login'));
 
 Route::post('/usuarios/auth',array('as'=>'usuarios.auth','uses'=>'UsuarioController@auth'));
+
+Route::get('/usuarios/logout',array('as'=>'usuarios.logout','uses'=>'UsuarioController@logout'));
 /*segmento tare 3*/
+
+/*Segmento del recurso POSTS*/
+
+/*Segmento tarea */
+//Ruta de recurso post
+Route::resource('posts', 'PostsController');
+/*Segmento tarea */
+
+/*Segmento de errores*/
+App::error(function ($exception,$code){
+
+});
+/*Segmento de errores*/

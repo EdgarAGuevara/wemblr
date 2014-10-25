@@ -22,4 +22,6 @@ return array(
 	"sent" => "Recordatorio de contraseña enviado!",
 
 	"wrong_credentials" => "Datos de Correo o contraseña incorrectos. ",
+
+	"wrong_registro"=>"Usted no se ha registrado aun."
 );
